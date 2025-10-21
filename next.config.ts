@@ -1,13 +1,13 @@
-import type { NextConfig } from "next";
+// import type { NextConfig } from "next";
 
-const nextConfig: NextConfig = {
-  /* config options here */
-   images: {
-    domains: ['ejrknapztxdzzoepzbgl.supabase.co'],
-  },
-};
+// const nextConfig: NextConfig = {
+//   /* config options here */
+//    images: {
+//     domains: ['ejrknapztxdzzoepzbgl.supabase.co'],
+//   },
+// };
 
-export default nextConfig;
+// export default nextConfig;
 
 
 // // /** @type {import('next').NextConfig} */
@@ -34,3 +34,21 @@ export default nextConfig;
 // };
 
 // export default nextConfig;
+
+
+import type { NextConfig } from "next";
+
+const nextConfig: NextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'ejrknapztxdzzoepzbgl.supabase.co',
+        port: '',
+        pathname: '/**',
+      },
+    ],
+  },
+};
+
+export default nextConfig;
